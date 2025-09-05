@@ -16,5 +16,4 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
       - uses: chiranjib-swain/labeler@feature/issue_870
-        with:
-          sync-labels: true
+  
