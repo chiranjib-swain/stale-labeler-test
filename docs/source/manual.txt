@@ -1,0 +1,4 @@
+Manual
+
+This file contains detailed information about using the software.
+Refer to this manual for advanced usage tips.

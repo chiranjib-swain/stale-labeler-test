@@ -1,0 +1,20 @@
+name: PR Labeler
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+  workflow_dispatch:  # This enables manual triggering from the Actions tab
+
+jobs:
+  label:
+    name: Add PR labels
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - uses: chiranjib-swain/labeler@feature/issue_870
+        with:
+          sync-labels: true

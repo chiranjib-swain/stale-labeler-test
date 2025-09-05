@@ -1,0 +1,5 @@
+cff-version: 1.2.0
+title: "Sample Project"
+authors:
+  - family-names: Example
+    given-names: Alice
