@@ -10,7 +10,7 @@ jobs:
     name: Add PR labels
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write
+      contents: write
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
