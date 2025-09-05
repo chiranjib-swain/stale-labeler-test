@@ -1,5 +1,5 @@
 
-icons:
+Test:
   - changed-files:
     - any-glob-to-any-file: svgs/*
     - any-glob-to-any-file: app/assets/appfilter.xml
