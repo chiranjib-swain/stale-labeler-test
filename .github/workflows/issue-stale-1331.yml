@@ -1,0 +1,27 @@
+name: "1331 PR check uses only-issue-types "
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: chiranjib-swain/stale@feature/only-issue-types-filter
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Make sure PRs are in scope
+          stale-issue-message: "stale Issue"
+          stale-pr-message: "stale PR"
+          days-before-stale: 300
+
+          # This triggers the buggy behavior
+          only-issue-types: 'bug,feature'
+
+          # Optional, but useful to see logs
+          debug-only: true
