@@ -11,7 +11,7 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: chiranjib-swain/stale@feature/only-issue-types-filter
+      - uses: trueberryless/actions-stale@fix/1331
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
